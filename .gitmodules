@@ -1,0 +1,3 @@
+[submodule "Sources/Cduckdb/duckdb/extension/vss"]
+	path = Sources/Cduckdb/duckdb/extension/vss
+	url = git@github.com:duckdb/duckdb_vss.git

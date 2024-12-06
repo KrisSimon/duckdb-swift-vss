@@ -4,9 +4,9 @@ import PackageDescription
 
 let package = Package(
 
-  name: "DuckDB",
+  name: "DuckDBVss",
   products: [
-    .library(name: "DuckDB", targets: ["DuckDB"]),
+    .library(name: "DuckDBVSS", targets: ["DuckDB"]),
   ],
   targets: [
     .target(
@@ -353,6 +353,7 @@ let package = Package(
         "duckdb/extension/json/json_deserializer.cpp",
         "duckdb/extension/json/serialize_json.cpp",
         "duckdb/ub_extension_json_json_functions.cpp",
+        "duckdb/extension/vss/src/vs_extension.cpp",
       ],
       cxxSettings: [
         .headerSearchPath("duckdb/src/include"),
@@ -401,10 +402,12 @@ let package = Package(
         .headerSearchPath("duckdb/extension/icu/third_party/icu/common"),
         .headerSearchPath("duckdb/extension/icu/third_party/icu/i18n"),
         .headerSearchPath("duckdb/extension/json/include"),
+        .headerSearchPath("duckdb/extension/vss/src/include"),
         .define("DUCKDB_EXTENSION_CORE_FUNCTIONS_LINKED"),
         .define("DUCKDB_EXTENSION_PARQUET_LINKED"),
         .define("DUCKDB_EXTENSION_ICU_LINKED"),
         .define("DUCKDB_EXTENSION_JSON_LINKED"),
+        .define("DUCKDB_EXTENSION_VSS_LINKED"),
         .define("DUCKDB_BUILD_LIBRARY")
       ]
     ),

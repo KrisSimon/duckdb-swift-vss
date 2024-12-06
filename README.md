@@ -18,8 +18,8 @@
   </a>
 </p>
 
-## DuckDB Swift
-DuckDB Swift is the native Swift API for DuckDB. It employs a modern Swift 
+## DuckDB Swift with VSS
+DuckDB Swift is the native Swift API for DuckDB compiled with the VSS extension. It employs a modern Swift 
 based API for clients across Apple, Linux and Windows platforms.
 
 ## DuckDB
@@ -31,14 +31,14 @@ To use DuckDB in your Swift based project:
 1. Add DuckDB to your `Swift.package` dependencies:
 
     ```swift
-    .package(url: "https://github.com/duckdb/duckdb-swift", .upToNextMajor(from: .init(1, 0, 0))),
+    .package(url: "https://github.com/KrisSimon/duckdb-swift-vss.git", .upToNextMajor(from: .init(1, 0, 0))),
     ```
 
 2. Add `DuckDB` as a dependency to your target:
  
     ```swift
     .target(name: "TargetName", dependencies: [
-      .product(name: "DuckDB", package: "duckdb-swift"),
+      .product(name: "DuckDBVSS", package: "duckdb-swift-vss"),
     ...
     ]),
     ```
